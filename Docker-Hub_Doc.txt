@@ -1,0 +1,59 @@
+1. To push and pull from Github follow this:
+
+https://ropenscilabs.github.io/r-docker-tutorial/04-Dockerhub.html
+
+2. To push the image into docker hub from local machine:
+
+Step 1: Login to DockerHub and create a account.
+
+https://hub.docker.com/
+
+Step 2: Create a repo to work with.
+
+Step 3:  On your local machine where you are running the app on docker container
+run the below command.
+
+docker container ls
+
+Make a note of the image name.
+
+Step 4: now the image needs to be tagged. Run the below command
+
+docker tag python/oracledb18 karthdz/oci-db-app:python-flask-app
+
+Step 5: docker login
+
+enter username and password
+
+Step 6: docker push karthdz/oci-db-app:python-flask-app
+
+Step 7: login to OCI compute, do sudo switch user and install docker. Follow below guide.
+
+https://blogs.oracle.com/virtualization/install-docker-on-oracle-linux-7-v2
+
+Step 8: Run
+
+docker login ( Use the login credentials for docker hub )
+
+docker pull karthdz/oci-db-app:python-flask-app
+
+Step 9: Open the port where docker is exposed on your OCI using one of the below
+commands.
+
+firewall-cmd --permanent --add-port=5000/tcp
+
+OR
+
+iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 5000 -j ACCEPT
+
+
+Step 10: you can check the docker images using command
+
+docker images
+
+Step 11:
+
+docker run -p 5000:5000 karthdz/oci-db-app:python-flask-app
+
+
+

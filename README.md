@@ -18,7 +18,7 @@ You will need the following things properly installed on your computer:
 
 ## Installation
 
-* run `git clone https://github.com/caseyr003/python-oracledb.git`
+* run `git clone https://github.com/KartikShrikantHegde/python-oracle.git`
 
 ## Running
 
@@ -33,5 +33,5 @@ To run the project locally follow the following steps:
 The JSON API has sample endpoints to start development
 Must configure `app.py` to connect to your Oracle DB and update the SQL query
 
-* `http://localhost:5000/api/test`
+* `http://localhost:5000/api/`
 (returns data from Oracle DB connection)

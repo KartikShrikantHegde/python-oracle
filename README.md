@@ -33,5 +33,5 @@ To run the project locally follow the following steps:
 The JSON API has sample endpoints to start development
 Must configure `app.py` to connect to your Oracle DB and update the SQL query
 
-* `http://localhost:5000`
+* `http://localhost:5000/`
 (returns data from Oracle DB connection)

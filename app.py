@@ -22,7 +22,7 @@ DB_PASSWORD = "DevOps_123#"
 
 # sample api endpoint returning data from db
 
-@app.route('/api')
+@app.route('/')
 def test():
     # make dsn and create connection to db
 
